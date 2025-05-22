@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IMREA</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+</head>
+<body>
+     <div class="login-container">
+    <h2>Login do Paciente</h2>
+    <form id="loginForm">
+      <label for="name">Nome completo:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="birthdate">Data de nascimento:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="photo">Foto do paciente:</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+      <div class="file-name" id="fileName">Nenhum arquivo selecionado</div>
+
+      
+      <button type="submit">Entrar</button>
+      
+      
+    
+
+    </form>
+  </div>
+   <script>
+    const photoInput = document.getElementById('photo');
+    const fileNameDisplay = document.getElementById('fileName');
+
+    photoInput.addEventListener('change', function () {
+      if (this.files.length > 0) {
+        fileNameDisplay.textContent = `Selecionado: ${this.files[0].name}`;
+      } else {
+        fileNameDisplay.textContent = 'Nenhum arquivo selecionado';
+      }
+
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      
+      window.location.href = "index.html"; 
+    });
+  </script>
+</body>
+</html>

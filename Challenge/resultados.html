@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados - IMREA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/resultado.css">
+</head>
+<body>
+
+ 
+  <h1>Resultados do Paciente</h1>
+
+  <div class="icones-container">
+    <div class="icone" onclick="mostrarMensagem('exames')">
+      <img src="imagens/exame.jpg" alt="Exames">
+      <p>Exames</p>
+    </div>
+    <div class="icone" onclick="mostrarMensagem('laudos')">
+      <img src="imagens/laudo.jpg" alt="Laudos">
+      <p>Laudos</p>
+    </div>
+    <div class="icone" onclick="mostrarMensagem('receitas')">
+      <img src="imagens/receita.avif" alt="Receitas">
+      <p>Receitas</p>
+    </div>
+    <div class="icone" onclick="window.close()">
+      <img src="imagens/voltar.png" alt="Voltar">
+      <p>Voltar</p>
+    </div>
+  </div>
+
+  <div class="mensagem" id="mensagemBox"></div>
+
+  <script>
+    function mostrarMensagem(tipo) {
+      const mensagemBox = document.getElementById('mensagemBox');
+      if (tipo === 'receitas') {
+        mensagemBox.innerHTML = `
+          <p>Receita médica disponível para download:</p>
+          <a href="ESSE DEMONSTRATIVO DE RECEITA MÉDIC.txt" download>Baixar Receita</a>
+        `;
+      } else {
+        mensagemBox.innerHTML = `<p>Sem resultados de ${tipo} por enquanto.</p>`;
+      }
+      mensagemBox.style.display = 'block';
+    }
+  </script
+</body>
+</html>

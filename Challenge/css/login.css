@@ -1,0 +1,197 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: 40px auto;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="file"] {
+      padding: 6px;
+    }
+
+    .file-name {
+      font-size: 12px;
+      color: #444;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #4c4faf;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #284cd9;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    section h2 {
+      color: #012d63;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #012d63;
+      padding-bottom: 8px;
+    }
+
+  .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9fafd;
+}
+
+/* Seção Sobre Nós */
+#sobre {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#sobre h2 {
+  font-size: 36px;
+  color: #012d63;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+#sobre p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Título da seção Serviços */
+#servicos h2 {
+  font-size: 34px;
+  color: #012d63;
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Grid responsiva para os cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Estilo dos cartões */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 28px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border-left: 6px solid #0056b3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card i {
+  font-size: 32px;
+  color: #0056b3;
+  margin-bottom: 14px;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Título do card */
+.card h3 {
+  font-size: 22px;
+  color: #012d63;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Texto do card */
+.card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .content {
+    padding: 30px 15px;
+  }
+
+  #sobre h2,
+  #servicos h2 {
+    font-size: 28px;
+  }
+
+  #sobre p,
+  .card p {
+    font-size: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}

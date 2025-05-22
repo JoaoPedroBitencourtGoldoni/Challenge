@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IMREA - HC Telemedicina</title>
+  
+  <!-- Fonte Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styleG.css">
+  <link rel="stylesheet" href="css/styleM.css">
+  <link rel="stylesheet" href="css/styleP.css">
+  
+</head>
+<body>
+
+  <header>
+  <div class="logo-container">
+    <img src="imagens/NOVO-LOGO-HC-2022.png" alt="Logo HC" title="HC" />
+    <img src="imagens/Image imrea 2.png" alt="Logo IMREA" title="IMREA" />
+  </div>
+
+  <nav aria-label="Navegação principal">
+    <button id="btnAgendar" type="button" aria-haspopup="dialog" aria-controls="modalAgendamento">Agendar Consulta</button>
+    <button id="btnChat" type="button" aria-haspopup="dialog" aria-controls="modalChat">Nosso Chat</button>
+    <button id="btnResultados" type="button" aria-haspopup="dialog" aria-controls="modalResultados">Resultados</button>
+    <button id="btnContato" type="button" aria-haspopup="dialog" aria-controls="aba-contato">Contato</button>
+  </nav>
+
+  <a href="login.html" target="_blank">
+    <div class="login-icon">
+      <img src="imagens/login.png" alt="Login">
+    </div>
+  </a>
+
+  <div class="aba" id="aba-contato" style="display: none;">
+    <span class="fechar" onclick="fecharAbas()">&times;</span>
+    <h2>Contato</h2>
+    <p><strong>📞 Telefone:</strong> (11) 5180-7800</p>
+    <p><strong>📍 Endereço:</strong> Rua Domingo de Soto, 100 - Vila Mariana, São Paulo.</p>
+    <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/redelucymontoro?igsh=MmVtcnU0OXNja2gy" target="_blank">@redelucymontoro</a></p>
+    <p><strong>🌐 Site:</strong> <a href="https://redelucymontoro.org.br/site/" target="_blank">imrea.org.br</a></p>
+  </div>
+</header>
+
+  <main>
+    <section class="hero" role="banner" aria-label="Apresentação do IMREA HC">
+      <h1>Telemedicina IMREA HC: Atendimento Online Humanizado e Seguro</h1>
+      <p>Agende consultas, receba resultados e fale com nossos profissionais de forma prática e acessível.</p>
+    </section>
+
+    <section class="carousel-container" aria-label="Galeria de imagens de Telemedicina IMREA HC">
+  <button class="prev" aria-label="Imagem anterior" title="Imagem anterior">&#10094;</button>
+  <button class="next" aria-label="Próxima imagem" title="Próxima imagem">&#10095;</button>
+  
+  <div id="carouselSlides">
+    <img src="https://www.hc.fm.usp.br/hc/conteudo/upload/fachada-imrea-(1)-7je2m3.jpg" alt="Consulta médica online via computador" class="carousel-slide active" />
+    <img src="https://clinicaflorence.com.br/wp-content/uploads/2022/01/galeria-unidade-salvador-11-1020x512.jpg" alt="Paciente falando com médico via videoconferência" class="carousel-slide" />
+    <img src="https://clinicaflorence.com.br/wp-content/uploads/2022/01/20210323-084310-1320x640.jpg" alt="Paciente falando com médico via videoconferência" class="carousel-slide" />
+  </div>
+</section>
+
+        
+    </section>
+
+    <section class="content" aria-label="Informações sobre o IMREA HC e serviços">
+      <section id="sobre" tabindex="0">
+        <h2>Sobre o IMREA HC</h2>
+        <p>O IMREA (Instituto de Medicina, Reabilitação e Educação de Assistência) do Hospital das Clínicas oferece atendimento humanizado por telemedicina, integrando tecnologia, segurança e cuidado para melhor atender nossos pacientes em todo o Brasil.</p>
+      </section>
+
+      <section id="servicos" tabindex="0">
+        <h2>Nossos Serviços</h2>
+        <div class="cards" role="list">
+          <article class="card" role="listitem" tabindex="0">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            <h3>Agendamento Online</h3>
+            <p>Marque sua consulta rapidamente pelo nosso sistema online, com confirmação via e-mail e SMS.</p>
+          </article>
+          <article class="card" role="listitem" tabindex="0">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            <h3>Chat com Profissionais</h3>
+            <p>Converse em tempo real com nossa equipe para tirar dúvidas e orientações.</p>
+          </article>
+          <article class="card" role="listitem" tabindex="0">
+            <i class="fas fa-file-medical-alt" aria-hidden="true"></i>
+            <h3>Resultados Online</h3>
+            <p>Acesse seus exames e laudos com segurança pelo nosso portal exclusivo.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="actions" role="region" aria-label="Ações rápidas">
+      <button id="btnAgendarFooter" class="botao-principal" type="button" aria-haspopup="dialog" aria-controls="modalAgendamento">
+        <i class="fas fa-calendar-check"></i> Agendar Consulta
+      </button>
+      <button id="btnChatFooter" class="botao-principal" type="button" aria-haspopup="dialog" aria-controls="modalChat">
+        <i class="fas fa-comments"></i> Nosso Chat 
+      </button>
+      <button id="btnResultadosFooter" class="botao-principal" type="button" aria-haspopup="dialog" aria-controls="modalResultados">
+        <i class="fas fa-file-medical-alt"></i> Resultados
+      </button>
+    </section>
+  </main>
+
+
+  <div id="modalAgendamento" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalAgendamentoTitulo" tabindex="-1">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Fechar formulário de agendamento">&times;</button>
+      <h2 id="modalAgendamentoTitulo">Agendar Consulta</h2>
+      <form id="formAgendamento" novalidate>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Seu nome completo" />
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="exemplo@dominio.com" />
+        
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX" pattern="[\d\s()-]{10,}" />
+        
+        <label for="dataConsulta">Data da Consulta</label>
+        <input type="date" id="dataConsulta" name="dataConsulta" required min="" />
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL CHAT -->
+  <div id="modalChat" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalChatTitulo" tabindex="-1">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Fechar chat">&times;</button>
+      <h2 id="modalChatTitulo">Nosso Chat</h2>
+      <p style="color: var(--cinza-medio); font-size: 1rem; margin-top: 1rem;">
+        Você pode conversar com nossos profissionais diretamente por aqui!
+      </p>
+      <p style="margin-top: 1rem;">
+        <a href="https://t.me/primeiro_ibm_bot" target="_blank" rel="noopener noreferrer" style="color: var(--laranja); font-weight: 700;"> Acesse o nosso chat </a>
+      </p>
+    </div>
+  </div>
+
+  
+  <div id="modalResultados" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalResultadosTitulo" tabindex="-1">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Fechar acesso a resultados">&times;</button>
+      <h2 id="modalResultadosTitulo">Resultados</h2>
+      <p style="color: var(--cinza-medio); font-size: 1rem; margin-top: 1rem;">
+        Para acessar seus resultados, por favor utilize o portal de pacientes do IMREA HC.
+      </p>
+      <p style="margin-top: 1rem;">
+        <a href="resultados.html" target="_blank" rel="noopener noreferrer" style="color: var(--laranja); font-weight: 700;">Acessar Portal de Resultados</a>
+      </p>
+    </div>
+  </div>
+  
+
+  <div>
+  <section class="content" aria-label="Informações sobre o IMREA HC e serviços">
+    <section id="sobre" tabindex="0">
+      <h2>O Grupo</h2>
+      <div class="grupo-alunos">
+        
+        
+        
+        <div class="aluno">
+          <img src="imagens/aluno2.jpg" alt="Foto do aluno" class="profile-pic" />
+          <span class="profile-name">João Pedro Bitencourt Goldoni</span>
+          <span class="profile-rm">564339 / 1TDSPX</span>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/joaopedrogoldoni?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://th.bing.com/th/id/OIP.wXu7EemBf_zTRrcepkjkAQHaHa?cb=iwc2&w=1920&h=1920&rs=1&pid=ImgDetMain" alt="LinkedIn" class="icon" />
+            </a>
+            <a href="https://github.com/JoaoPedroBitencourtGoldoni" target="_blank">
+              <img src="https://th.bing.com/th/id/R.7a864f07681f187fb572468bfc949977?rik=3fUik6Pc6xTrHQ&pid=ImgRaw&r=0" alt="GitHub" class="icon" />
+            </a>
+          </div>
+        </div>
+        
+        <div class="aluno">
+          <img src="imagens/aluno3.jpg" alt="Foto do aluno" class="profile-pic" />
+          <span class="profile-name">Marina Tamagnini Magalhães</span>
+          <span class="profile-rm">561786 / 1TDSPX</span>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/marina-t-36b14328b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://th.bing.com/th/id/OIP.wXu7EemBf_zTRrcepkjkAQHaHa?cb=iwc2&w=1920&h=1920&rs=1&pid=ImgDetMain" alt="LinkedIn" class="icon" />
+            </a>
+            <a href="https://github.com/marina-2907/marina" target="_blank">
+              <img src="https://th.bing.com/th/id/R.7a864f07681f187fb572468bfc949977?rik=3fUik6Pc6xTrHQ&pid=ImgRaw&r=0" alt="GitHub" class="icon" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </section>
+</div>
+
+     
+           
+  <footer>
+    &copy;2025 Hospital HC - IMREA. Todos os direitos reservados. FIAP
+  </footer>
+
+ <script>
+  // === CARROSSEL ===
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const indicator = document.getElementById('carouselIndicator');
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    if (indicator) {
+      indicator.textContent = `${index + 1} / ${totalSlides}`;
+    }
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  });
+
+  showSlide(currentIndex);
+
+  // === LOGIN (caso exista) ===
+  function toggleLogin() {
+    const login = document.getElementById('login');
+    if (login) {
+      login.classList.toggle('active');
+    }
+  }
+
+  // === CONTATO (ABA) ===
+  const btnContato = document.getElementById('btnContato');
+  const abaContato = document.getElementById('aba-contato');
+
+  btnContato?.addEventListener('click', () => {
+    if (abaContato) {
+      abaContato.style.display = 'block';
+    }
+  });
+
+  function fecharAbas() {
+    if (abaContato) {
+      abaContato.style.display = 'none';
+    }
+  }
+
+  // === MODAIS ===
+  const modalAgendamento = document.getElementById('modalAgendamento');
+  const modalChat = document.getElementById('modalChat');
+  const modalResultados = document.getElementById('modalResultados');
+
+  const btnAgendar = document.getElementById('btnAgendar');
+  const btnChat = document.getElementById('btnChat');
+  const btnResultados = document.getElementById('btnResultados');
+
+  const btnAgendarFooter = document.getElementById('btnAgendarFooter');
+  const btnChatFooter = document.getElementById('btnChatFooter');
+  const btnResultadosFooter = document.getElementById('btnResultadosFooter');
+
+  const modais = [modalAgendamento, modalChat, modalResultados];
+
+  function abrirModal(modal) {
+    if (modal) {
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+  }
+
+  function fecharModal(modal) {
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+  // === Abertura dos modais ===
+  btnAgendar?.addEventListener('click', () => abrirModal(modalAgendamento));
+  btnChat?.addEventListener('click', () => abrirModal(modalChat));
+  btnResultados?.addEventListener('click', () => abrirModal(modalResultados));
+
+  btnAgendarFooter?.addEventListener('click', () => abrirModal(modalAgendamento));
+  btnChatFooter?.addEventListener('click', () => abrirModal(modalChat));
+  btnResultadosFooter?.addEventListener('click', () => abrirModal(modalResultados));
+
+  // === Fechamento dos modais com botão "×" ===
+  modais.forEach(modal => {
+    const btnClose = modal?.querySelector('.close-btn');
+    btnClose?.addEventListener('click', () => fecharModal(modal));
+  });
+
+  // === Fechamento ao clicar fora do modal ===
+  modais.forEach(modal => {
+    modal?.addEventListener('click', e => {
+      if (e.target === modal) fecharModal(modal);
+    });
+  });
+
+  // === Fechamento com ESC ===
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      modais.forEach(modal => {
+        if (modal?.style.display === 'flex') fecharModal(modal);
+      });
+    }
+  });
+
+  // === FORMULÁRIO DE AGENDAMENTO ===
+  const formAgendamento = document.getElementById('formAgendamento');
+  const inputDataConsulta = document.getElementById('dataConsulta');
+
+  if (inputDataConsulta) {
+    const hoje = new Date().toISOString().split('T')[0];
+    inputDataConsulta.setAttribute('min', hoje);
+  }
+
+  formAgendamento?.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!formAgendamento.checkValidity()) {
+      alert('Por favor, preencha todos os campos corretamente.');
+      return;
+    }
+    alert('Consulta agendada com sucesso! Entraremos em contato.');
+    formAgendamento.reset();
+    fecharModal(modalAgendamento);
+  });
+</script>
+</body>
+</html>
